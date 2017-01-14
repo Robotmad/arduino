@@ -1,0 +1,42 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+
+robotmad_m0.name=Robotmad M0 (Native USB Port)
+robotmad_m0.vid.0=0x03EB
+robotmad_m0.pid.0=0x2404
+robotmad_m0.upload.tool=arduino:bossac
+robotmad_m0.upload.protocol=sam-ba
+robotmad_m0.upload.maximum_size=262144
+robotmad_m0.upload.use_1200bps_touch=true
+robotmad_m0.upload.wait_for_upload_port=true
+robotmad_m0.upload.native_usb=true
+robotmad_m0.build.mcu=cortex-m0plus
+robotmad_m0.build.f_cpu=48000000L
+robotmad_m0.build.usb_product="Robotmad M0"
+robotmad_m0.build.usb_manufacturer="Robotmad"
+robotmad_m0.build.board=SAMD_ROBOTMAD
+robotmad_m0.build.core=arduino:arduino
+robotmad_m0.build.extra_flags=-DARDUINO_SAMD_ZERO -D__SAMD21G18A__ {build.usb_flags}
+robotmad_m0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+robotmad_m0.build.openocdscript=openocd_scripts/arduino_zero.cfg
+robotmad_m0.build.variant=arduino:arduino_zero
+robotmad_m0.build.variant_system_lib=
+robotmad_m0.build.vid=0x239A
+robotmad_m0.build.pid=0x800B
+robotmad_m0.bootloader.tool=arduino:openocd
+robotmad_m0.bootloader.file=zero/samd21_sam_ba.bin
+
